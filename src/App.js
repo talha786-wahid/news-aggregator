@@ -79,12 +79,19 @@ export default function App() {
           <CircularProgress />
         </Box>
       ) : (
-        <Grid container spacing={2} sx={{ mt: 2 }}>
+        <Grid
+          container
+          spacing={2}
+          sx={{ mt: 2 }}
+          direction="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
           {filters.news?.length > 0 ? (
             filters.news.map(
               (article) =>
                 article.source?.id && (
-                  <Grid item xs={12} md={4} lg={3} key={article.id}>
+                  <Grid item xs={11} md={4} lg={3} key={article.id}>
                     <NewsCard data={article} />
                   </Grid>
                 )

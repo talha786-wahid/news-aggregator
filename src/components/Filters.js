@@ -86,7 +86,16 @@ function Filters({ search }) {
     setFilters({ news: news });
   };
   return (
-    <Box sx={{ marginTop: 2 }}>
+    <Box
+      sx={{
+        marginTop: 2,
+        '@media (max-width: 600px)': {
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '20px',
+        },
+      }}
+    >
       <Typography variant="h5" component="h6" fontWeight={600}>
         Filters
       </Typography>
@@ -116,7 +125,12 @@ function Filters({ search }) {
         color="primary"
         variant="outlined"
         size="large"
-        sx={{ height: 55 }}
+        sx={{
+          height: 55,
+          '@media (max-width: 600px)': {
+            m: '7px 7px 0 0',
+          },
+        }}
         onClick={handleSubmit}
       >
         Filter
@@ -127,7 +141,13 @@ function Filters({ search }) {
         color="primary"
         variant="outlined"
         size="large"
-        sx={{ m: '7px', height: 55 }}
+        sx={{
+          m: '7px',
+          height: 55,
+          '@media (max-width: 600px)': {
+            ml: 0,
+          },
+        }}
         onClick={clearFilter}
       >
         Clear

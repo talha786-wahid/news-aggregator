@@ -3,7 +3,7 @@
 export const apis = {
   newsApi: {
     url: 'https://newsapi.org/v2',
-    key: 'a40b4deeb15a4fd7a0f06dcfdaa15a79',
+    key: '9926efb93c7443b0b8621c1c0297671e',
   },
   guardianApi: {
     url: 'https://content.guardianapis.com/search',
